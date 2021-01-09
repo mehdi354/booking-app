@@ -1,0 +1,9 @@
+.Review {
+    float: left;
+    width: 100;
+    padding: 40px 0px;
+}
+.StarImg {
+    width: 30px;
+    margin-top: -6px;
+}

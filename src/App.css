@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+body {
+    color: #484848;
+}
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.col-xs-5ths {
+    width: 20%;
+    float: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
 }
 
-.App-link {
-  color: #61dafb;
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+/* -------------- dropdown for passenger ------------- */
+
+.passDropDown {
+    opacity: 0;
+    display: none;
+    transition: .2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active-dropdown {
+    opacity: 1;
+    display: block;
+    transition: .2s;
+}
+
+.passCount-container {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.passDropDown {
+    position: absolute;
+    top: 60px;
+    background: #FFFFFF;
+    z-index: 99;
+    width: 350px;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 15px;
+}
+
+.input-field-single {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.input-field-single p {
+    float: left;
+    width: 50%;
+    margin: 0px;
+    padding-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.no-of-adults {
+    float: left;
+    width: 50%;
+    text-align: right
+}
+
+/* .no-of-adults input {
+    width: 34px;
+    text-align: center;
+    padding: 7px;
+    margin: 0px;
+    border: 1px solid #CCCCCC
+} */
+
+.animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        -webkit-transform: transform;
+        -webkit-opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+}
+
+.slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+}.custom_form_group.form-group.form-group-3.has-feedback.has-feedback-left {
+    position: relative;
 }
