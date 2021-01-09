@@ -1,8 +1,11 @@
 import './App.css';
+import Layout from './container/Layout/Layout';
 
 function App() {
   return (
-    <div className="App"></div>
+    <div className="">
+      <Layout/>
+    </div>
   );
 }
 
