@@ -1,0 +1,22 @@
+
+1. setup 				- 1hr
+
+2. Landing page:
+    - Header				- 1hr
+    - Footer 				- 1hr
+    - SearchForm 			- 2hr
+    - Contents				- 3hr
+3. List page:
+    - property List  design   		- 1hr
+	
+4. Details page:
+    - property details 			- 1hr
+	
+5. Host PAge and form:
+    - design 				- 1hr
+6. Redux Implementation          	- 6hr
+7. Api Integration Implementation	- 9hr
+
+=====================================================
+	Total 				- 26 hours
+
