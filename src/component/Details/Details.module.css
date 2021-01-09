@@ -1,0 +1,195 @@
+.GalleryImages {
+    width: 100%;
+    float: left;
+}
+.GalleryImages img {
+    width: 100%;
+}
+.ListCardContent ul {
+    margin: 0px;
+    padding: 0px;
+}
+.ListCardContent ul li {
+    display: inline-block;
+    padding-right: 20px;
+    position: relative;
+    color: #727272;
+    font-size: 15px;
+}
+.ListCardContent ul li:after {
+    position: absolute;
+    content: '.';
+    top: -15px;
+    right: 10px;
+    width: 2px;
+    height: 2px;
+    font-size: 25px;
+    color: #727272;
+}
+.ListCardContent ul li:last-child:after {
+    content: '';
+}
+.CheckoutDates {
+    float: left;
+    width: 100%;
+    position: relative;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+
+}
+.propertyDetails {
+    width: 100%;
+    float: left;
+    margin: 20px 0px;
+}
+.propertyDetails h6{
+    font-size: 22px;
+    width: 60%;
+    float: left;
+}
+.propertyDetails h6 span{
+    display: block;
+    font-size: 13px;
+}
+.avatar {
+    width: 40%;
+    float: right;
+}
+.avatar img {
+    width: 40px;
+}
+.avatar p {
+    font-size: 13px;
+    margin: 0px;
+}
+.ListCardContent {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.ListCardContent p{
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+.ListCardContent i{
+    margin-right: 10px;
+    font-size: 10px;
+}
+.ListCardContent ul {
+    margin-left: 20px;
+    padding: 0px;
+}
+.typeDesc {
+    padding-left: 20px;
+    font-weight: 400 !important;
+}
+
+.CheckoutDetails {
+    float: left;
+    width: 100%;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+    padding: 20px 20px;
+}
+.Price {
+    font-size: 20px;
+    font-weight: 800;
+}
+.Price span{
+    font-size: 14px;
+    font-weight: 500;
+}
+.Review {
+    font-size: 13px;
+}
+.Review i{
+    color : #03848A;
+    margin-right: 10px;
+}
+.CheckoutDatesCotainer {
+    padding: 20px 0px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.CheckoutDatesCotainer label {
+    margin-bottom: 5px;
+}
+.Checkout ul {
+    margin :0px;
+    padding: 0px
+}
+.Checkout ul li{
+    padding: 5px 0px;
+    list-style: none;
+    border-bottom: 1px solid #CCCCCC;
+    float: left;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+.Checkout ul li:last-child{
+    border: none;
+}
+.CheckoutTerm {
+    float: left;
+    width: 80%;
+}
+.CheckoutPrice {
+    float: left;
+    width: 20%;
+    text-align: right;
+}
+.CheckoutBTN {
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    background: #FF5A60;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    transition: .3s;
+}
+.CheckoutBTN:hover {
+    opacity: .7;
+}
+.Note {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 20px 0px 0px 0px;
+}
+.Report {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 15px 0px !important;
+    display: block;
+    /* margin-top: 20px !important; */
+    float: left;
+    width: 100%;
+}
+.Report i {
+    margin-right: 10px;
+}
+.propertyExtra {
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+    padding: 50px 0px;
+    border-top: 1px solid #CCCCCC;
+}
+.propertyExtra p{
+    font-size: 15px;
+}
+.propertyExtra ul{
+    margin: 0px;
+    padding: 0px;
+}
+.propertyExtra ul li{
+    font-size: 15px;
+    list-style: none;
+}

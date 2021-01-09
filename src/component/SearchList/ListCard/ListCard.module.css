@@ -1,0 +1,68 @@
+.ListCard {
+    position: relative;
+    margin-bottom:20px;
+    border-bottom: 1px solid #DCDCDB;
+    padding-bottom: 20px;
+}
+.ListCardImage {
+    float: left;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.ListCardImage img{
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+}
+.ListCardContent {
+    float: left;
+    width: 100%;
+    padding-top: 20px;
+}
+.ListCardContent h6{
+    text-transform: capitalize;
+}
+.ListCardContentType{
+    text-transform: capitalize;
+    font-size: 13px;
+    color: #727272;
+}
+.ListCardContentType span {
+    text-align: right;
+    float: right;
+}
+.ListCardContentType span i{
+   color: #FF385C;
+}
+.ListCardContentTitle {
+    margin: 10px 0px;
+    font-size: 18px;
+}
+.ListCardContent ul {
+    margin: 0px;
+    padding: 0px;
+}
+.ListCardContent ul li {
+    display: inline-block;
+    padding-right: 20px;
+    position: relative;
+    color: #727272;
+    font-size: 13px;
+}
+.ListCardContent ul li:after {
+    position: absolute;
+    content: '.';
+    top: -15px;
+    right: 10px;
+    width: 2px;
+    height: 2px;
+    font-size: 25px;
+    color: #727272;
+}
+.propertyPrice {
+    float: right;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
