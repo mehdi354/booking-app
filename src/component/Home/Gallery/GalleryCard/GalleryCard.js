@@ -2,7 +2,7 @@
 import React from 'react'
 import StarRatingComponent from 'react-star-rating-component';
 import classes from './GalleryCard.module.css';
-const GalleryCard = props => {
+const GalleryCard = React.memo(props => {
     const {img,type,name,designation} = props.gallery
     return (
         <div className="col-md-5ths col-xs-6">
@@ -23,5 +23,5 @@ const GalleryCard = props => {
             </div>
         </div>
     )
-}
+})
 export default GalleryCard

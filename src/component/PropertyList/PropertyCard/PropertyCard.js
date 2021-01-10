@@ -3,7 +3,9 @@ import React from 'react'
 import classes from './PropertyCard.module.css';
 import { Link } from 'react-router-dom';
 const PropertyCard = props => {
-    const {id,image_url_1,title,type,rating,price,bedroom,bed,bathroom,guests} = props.detail
+    
+    const {id,image_url_1,title,type,rating,price,bedroom,bed,bathroom,guests} = props.detail;
+    console.log(props.detail);
     return (
         <div className="col-md-12">
             <div className={classes.ListCard}>

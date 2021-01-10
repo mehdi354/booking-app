@@ -41,12 +41,12 @@ const Details = props => {
             others,
             totalreview
         } = props.detail
-       if(others) {
-        var extra = others.map( data => {
-            return <li>- {data}</li>
-        }) 
-       }
-        
+       
+        if(others) {
+            var extra = others.map( data => {
+                return <li>- {data}</li>
+            }) 
+           }
 
        content =     <div className={classes.Details}>
                         <div className="row">

@@ -2,7 +2,7 @@ import React from 'react'
 import GalleryCard from './GalleryCard/GalleryCard'
 import classes from './Gallery.module.css'
 import {connect} from 'react-redux'
-const Gallery = props => {
+const Gallery = React.memo(props => {
     // const galleryData = [{
     //     id: Math.random().toString(),
     //     type: 'HANDBAG SHOPPING',
@@ -56,7 +56,7 @@ const Gallery = props => {
             
         </div>
     )
-}
+})
 const mapStateToProps = state => {
     return {
         galleryData : state.home.galleryData

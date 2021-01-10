@@ -7,17 +7,38 @@ import classes from './PropertyList.module.css'
 import {connect} from 'react-redux'
 import * as actions from '../../store/Actions/index'
 import Spinner from '../UI/Spinner/Spinner'
+import Pagination from '../Pagination/Pagination'
 const PropertyList = props => {
+    const [currentPage,setCurrentPage] =useState(1);
+    const [postsPerPage,setPostsPerPage] =useState(5);
+
     useEffect(()=>{
         props.onFetchProperties()
-    },[props]);
+    },[props,props.onFetchProperties]);
 
     let list= <Spinner />;
 
     if(!props.loading) {
-        list = props.detailsData.map(detail => {
-            return <PropertyCard key={detail.id} detail={detail}/>
-        });
+
+            
+    var indexOfLastPost = currentPage * postsPerPage;
+    var indexOfFirstPost = indexOfLastPost - postsPerPage;
+    var currentPosts = props.detailsData.slice(indexOfFirstPost, indexOfLastPost);
+
+    var paginate = pageNum => setCurrentPage(pageNum);
+
+    var nextPage = () => setCurrentPage(currentPage + 1);
+
+    var prevPage = () => setCurrentPage(currentPage - 1);
+
+        if(currentPosts.length > 0){
+            list = currentPosts.map(detail => {
+                return <PropertyCard key={detail.id} detail={detail} />
+            });
+        }else {
+            list = <h4>No Properties to show</h4>
+        }
+        console.log(currentPosts);
     }
 
 
@@ -29,7 +50,7 @@ const PropertyList = props => {
                     {list}
                 </div>
                 <div className={classes.SearchPAgination}>
-                <nav aria-label="Page navigation example">
+                {/* <nav aria-label="Page navigation example">
                     <ul class="pagination">
                         <li class="page-item"><a class="page-link" href="/">Previous</a></li>
                         <li class="page-item"><a class="page-link" href="/">1</a></li>
@@ -37,7 +58,9 @@ const PropertyList = props => {
                         <li class="page-item"><a class="page-link" href="/">3</a></li>
                         <li class="page-item"><a class="page-link" href="/">Next</a></li>
                     </ul>
-                    </nav>
+                    </nav> */}
+
+                    <Pagination postsPerPage={postsPerPage} totalPosts={props.detailsData.length} paginate={paginate} nextPage={nextPage} prevPage={prevPage}/>
                 </div>
             </div>
             
