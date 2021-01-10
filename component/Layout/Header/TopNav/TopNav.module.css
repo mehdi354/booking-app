@@ -1,0 +1,43 @@
+.TopNavForm {
+    padding: 10px 0px;
+}
+.InputFormControl {
+    position: relative;
+    border: 1px solid #cccccc;
+    border-radius: 0px;
+    height: 35px;
+    box-shadow: 0px 1px 4px 3px rgb(0 0 0 / 2%);
+}
+.InputLeftBorder {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.InputRightBorder {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.InputFormControl input{
+    position: absolute;
+    left:0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    padding-left:40px;
+    border: none;
+    border-radius: 4px;
+    color: #484848;
+    font-size: 14px;
+}
+.InputFormControl input:focus {
+    outline: none;
+}
+.InputIcon {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    z-index: 9;
+}
+.InputIcon i{
+    color: #484848;
+    font-size: 14px;
+}
