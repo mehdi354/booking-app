@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
 // import classes from './Home.module.css'
 import SearchForm from '../SearchForm/SearchForm'
-import ListCard from './ListCard/ListCard'
-import classes from './SearchList.module.css'
+import PropertyCard from './PropertyCard/PropertyCard'
+import classes from './PropertyList.module.css'
 // import axios from '../../Config/Config'
 import {connect} from 'react-redux'
 import * as actions from '../../store/Actions/index'
 import Spinner from '../UI/Spinner/Spinner'
-const SearchList= props => {
-
+const PropertyList = props => {
     useEffect(()=>{
         props.onFetchProperties()
     },[props]);
@@ -17,7 +16,7 @@ const SearchList= props => {
 
     if(!props.loading) {
         list = props.detailsData.map(detail => {
-            return <ListCard key={detail.id} detail={detail}/>
+            return <PropertyCard key={detail.id} detail={detail}/>
         });
     }
 
@@ -47,7 +46,7 @@ const SearchList= props => {
 }
 const mapStateToProps = state => {
     return {
-        detailsData : state.property.searchData,
+        detailsData : state.property.detailsData,
         loading : state.property.loading
     }
 }
@@ -59,4 +58,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(SearchList)
+export default connect(mapStateToProps,mapDispatchToProps)(PropertyList)

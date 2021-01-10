@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import classes from './SearchForm.module.css'
 import DatePickerCom from './DatePickerCom/DatePickerCom'
-
+import axios from 'axios'
+import { withRouter } from 'react-router-dom';
+import {connect} from 'react-redux'
+import * as actions from '../../store/Actions/index'
 
 const SearchForm = props => {
     const [showDropDown,setShowDropDown] = useState(false)
@@ -26,36 +29,48 @@ const SearchForm = props => {
         let dropdown = null;
         if(showDropDown) {
             dropdown = <div className="passDropDown animate slideIn active-dropdown" >
-            <div className="col-md-12">
-                <div className="custom_form_group form-group form-group-3 has-feedback has-feedback-left">
-                    <div className="input-field-single">
-                        <p>Adults</p>
-                        <div className="no-of-adults">
-                            <input type="text" name="adults" className={classes.in_field} value={adult} onChange={(e)=> setShowAdult(e.target.value)} />
+                            <div className="col-md-12">
+                                <div className="custom_form_group form-group form-group-3 has-feedback has-feedback-left">
+                                    <div className="input-field-single">
+                                        <p>Adults</p>
+                                        <div className="no-of-adults">
+                                            <input type="text" name="adults" className={classes.in_field} value={adult} onChange={(e)=> setShowAdult(e.target.value)} />
+                                        </div>
+                                    </div>
+                                    <div className="input-field-single">
+                                        <p>Children</p>
+                                        <div className="no-of-adults">
+                                            <input type="text" name="child"  className={classes.in_field} value={children} onChange={(e)=> setShowChildren(e.target.value)} />
+                                        </div>
+                                    </div>
+                                    <div className="input-field-single">
+                                        <p>Rooms</p>
+                                        <div className="no-of-adults">
+                                            <input type="text" name="room" className={classes.in_field} value={room} onChange={(e)=> setRoom(e.target.value)} />
+                                        </div>
+                                    </div>
+                                    <div className="input-field-single">
+                                        <div className="text-center">
+                                            <button className={classes.Confirm} onClick={setInputVal}>Confirm</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div className="input-field-single">
-                        <p>Children</p>
-                        <div className="no-of-adults">
-                            <input type="text" name="child"  className={classes.in_field} value={children} onChange={(e)=> setShowChildren(e.target.value)} />
-                        </div>
-                    </div>
-                    <div className="input-field-single">
-                        <p>Rooms</p>
-                        <div className="no-of-adults">
-                            <input type="text" name="room" className={classes.in_field} value={room} onChange={(e)=> setRoom(e.target.value)} />
-                        </div>
-                    </div>
-                    <div className="input-field-single">
-                        <div className="text-center">
-                            <button className={classes.Confirm} onClick={setInputVal}>Confirm</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    }
+        }
+        console.log()
+        
+        
+        const onsubmitHandeller = (e) => {
+            e.preventDefault();
+            if(location !=- '') {
+                console.log(props);
+                props.onFetchProperties(location,props.history)
+            }
+            
+        }
+
     return (
         <div className="col-md-12 mt-5">
             <div className={classes.SearchForm}>
@@ -110,7 +125,7 @@ const SearchForm = props => {
                                 </div>
                                 <div className="col-md-1 px-0">
                                     <div className={ classes.InputFormControl + " text-center"}>
-                                        <button className={classes.SearchBTN}>Search</button>
+                                        <button className={classes.SearchBTN} onClick={onsubmitHandeller}>Search</button>
                                     </div>
                                 </div>
                             </div>
@@ -125,4 +140,12 @@ const SearchForm = props => {
         </div>
     )
 }
-export default SearchForm
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onFetchProperties : (location,history) => dispatch(actions.searchProperties(location,history))
+    }
+}
+
+
+export default connect(null,mapDispatchToProps)(SearchForm)

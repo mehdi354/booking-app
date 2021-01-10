@@ -1,8 +1,8 @@
 
 import React from 'react'
-import classes from './ListCard.module.css';
+import classes from './PropertyCard.module.css';
 import { Link } from 'react-router-dom';
-const ListCard = props => {
+const PropertyCard = props => {
     const {id,image_url_1,title,type,rating,price,bedroom,bed,bathroom,guests} = props.detail
     return (
         <div className="col-md-12">
@@ -45,4 +45,4 @@ const ListCard = props => {
         </div>
     )
 }
-export default ListCard
+export default PropertyCard

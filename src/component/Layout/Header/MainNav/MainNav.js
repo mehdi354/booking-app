@@ -1,21 +1,22 @@
 import React from 'react'
 import classes from './MainNav.module.css'
+import { Link } from 'react-router-dom'
 const MainNav = props => {
     return (
         <div className={classes.MainNav}>
             <div className="container-fluid">
                 <ul>
                     <li>
-                        <a href="/">FOR YOU</a>
+                        <Link to="/">FOR YOU</Link>
                     </li>
                     <li>
-                        <a href="/">HOMES</a>
+                        <Link to="/">HOMES</Link>
                     </li>
                     <li>
-                        <a href="/">EXPERIENCES</a>
+                        <Link to="/">EXPERIENCES</Link>
                     </li>
                     <li>
-                        <a href="/">PLACES</a>
+                        <Link to="/">PLACES</Link>
                     </li>
                 </ul>
         

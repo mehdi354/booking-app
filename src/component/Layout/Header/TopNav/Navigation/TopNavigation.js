@@ -1,20 +1,22 @@
 import React from 'react'
 import classes from './TopNavigation.module.css'
+import { Link } from 'react-router-dom'
+import Host from '../../../../Host/Host'
 const TopNavigation = props => {
     return (
         <div className={classes.TopNavigation}>
             <ul>
                 <li>
-                    <a href="/">Become a Host</a>
+                    <Link to="/host" >Become a Host</Link>
                 </li>
                 <li>
-                    <a href="/">Help</a>
+                    <Link to="/">Help</Link>
                 </li>
                 <li>
-                    <a href="/">Sign Up</a>
+                    <Link to="/">Sign Up</Link>
                 </li>
                 <li>
-                    <a href="/">Log In</a>
+                    <Link to="/">Log In</Link>
                 </li>
             </ul>
         </div>

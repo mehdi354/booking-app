@@ -8,7 +8,8 @@ import {
     Route,
   } from "react-router-dom";
 import Details from '../../component/Details/Details'
-// import Host from '../../component/Host/Host'
+import Host from '../../component/Host/Host'
+import PropertyList from '../../component/PropertyList/PropertyList'
 const Layout = props => {
     return (
         <div className="">
@@ -16,8 +17,9 @@ const Layout = props => {
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/searchList" component={SearchList}/>
+                <Route exact path="/property-list" component={PropertyList}/>
                 <Route exact path="/details/:id" component={Details}/>
-                {/* <Route exact path="/host" component={Host}/> */}
+                <Route exact path="/host" component={Host}/>
             {/* <Home />
             <SearchList /> */}
             </Switch>

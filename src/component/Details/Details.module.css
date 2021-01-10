@@ -1,9 +1,31 @@
+.Details {
+    width: 100%;
+    float: left;
+    margin-top:40px;
+}
+.PropertyTitle {
+    margin-bottom: 10px;
+}
+.PropertyTitle p,.PropertyTitle h6{
+    margin-bottom: 5px;
+}
+.Details P{
+    color: #484848;
+    font-weight: 500;
+}
+.tripadviser {
+    width: 120px;
+    margin-right: 10px;
+}
 .GalleryImages {
     width: 100%;
     float: left;
 }
 .GalleryImages img {
     width: 100%;
+}
+.GalleryImagesMain img{
+    height: 400px;
 }
 .ListCardContent ul {
     margin: 0px;
@@ -103,6 +125,7 @@
 }
 .Review {
     font-size: 13px;
+    margin-bottom: 0px;
 }
 .Review i{
     color : #03848A;
@@ -111,6 +134,8 @@
 .CheckoutDatesCotainer {
     padding: 20px 0px;
     border-bottom: 1px solid #CCCCCC;
+    float: left;
+    width: 100%;
 }
 .CheckoutDatesCotainer label {
     margin-bottom: 5px;
@@ -152,6 +177,7 @@
     color: #FFFFFF;
     font-weight: 500;
     transition: .3s;
+    margin-top: 10px;
 }
 .CheckoutBTN:hover {
     opacity: .7;
@@ -192,4 +218,10 @@
 .propertyExtra ul li{
     font-size: 15px;
     list-style: none;
+}
+.TotalGuest label{
+    margin:10px 0px
+}
+.TotalGuest select{
+    margin-bottom:15px
 }

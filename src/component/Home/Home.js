@@ -8,7 +8,7 @@ const Home = props => {
     return (
         <div className={classes.Home}>
             <div className="container">
-                <SearchForm />
+                <SearchForm {...props}/>
                 <Review />
                 <JustBooked />
                 <Gallery />

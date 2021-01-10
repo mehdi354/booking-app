@@ -12,7 +12,7 @@ const FooterNavigation = props => {
                                 <option value="Español">Español</option>
                                 <option value="Chinese">Chinese</option>
                                 <option value="3">Three</option>
-                                </select>
+                            </select>
                         </div>
                         <div className="col col-md-8">
                             <select className="form-select mt-2" aria-label="Default select example">
