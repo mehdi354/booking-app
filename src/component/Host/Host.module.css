@@ -11,6 +11,9 @@
     transition: .3s;
     margin: 20px 0px;
 }
+.capitalize {
+    text-transform: capitalize;
+}
 .SubmitBTN:hover {
     opacity: .7;
 }

@@ -85,7 +85,7 @@ const Host = props => {
                                         <label  className="form-label">Name</label>
                                     </div>
                                     <div className="col-md-9">
-                                        <input type="text" className="form-control" value={name} onChange={e => setName(e.target.value)}/>
+                                        <input type="text" className={`form-control + ${classes.capitalize}`} value={name} onChange={e => setName(e.target.value)}/>
                                     </div>
                                 </div>
                             </div>
@@ -369,7 +369,7 @@ const Host = props => {
                                         <label  className="form-label">Location</label>
                                     </div>
                                     <div className="col-md-9">
-                                    <input type="text" className="form-control" value={location} onChange={e => setlocation(e.target.value)}/>
+                                    <input type="text" className={`form-control + ${classes.capitalize}`}  value={location} onChange={e => setlocation(e.target.value)}/>
                                     </div>
                                 </div>
                             </div>

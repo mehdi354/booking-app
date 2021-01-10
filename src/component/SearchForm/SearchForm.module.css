@@ -54,6 +54,7 @@
     border-radius: 4px;
     color: #484848;
     font-size: 14px;
+    text-transform: capitalize;
 }
 .FullWidth .Input{
     width: 100% !important;
